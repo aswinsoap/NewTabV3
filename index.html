@@ -1,111 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
-  <title>V3</title>
+  <title>NewTabV2</title>
   <style>
-    body {
-      font-family: 'Roboto Mono', monospace;
-      background-color: #000;
-      color: #fff;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+    html{
+  background-color: #000000;
+}
+body {
+  margin: 0px;
+  user-select: none;
+  -moz-user-select: none;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.bookmarks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 44%;
+}
+.square {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  width: 100%;
+  gap: 5px;
+  text-align: center;
+  display: flex; /* Add this property to make flex container */
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
 
-    h2 {
-      width: 100%;
-      color: #777;
-      margin-top: 20px;
-    }
+.square-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #414141;
+  margin: 0em 0em .35em 0em;
+}
+.square-body {
+  vertical-align: top;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px; /* Decreased padding */
+  border-radius: 20px;
+  background-color: #272727;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  width: min-content;
+  display: block; /* Display links as block elements to take full width */
+}
 
-    a {
-      background-color: #111;
-      border: 1px solid #333;
-      border-radius: 15px; /* Increased border radius */
-      height: 80px; /* Increased height of the cards */
-      display: block;
-      margin: 0 10px 10px 0;
-      padding: 15px;
-      text-decoration: none;
-      color: #fff;
-      transition: background-color 0.3s ease;
-      width: calc(16.66% - 10px); /* Adjust width for six columns with margin */
-      box-sizing: border-box;
-    }
-
-    a:hover {
-      background-color: #333;
-    }
-
-    /* Styles for the navbar */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #000000;
-      padding: 10px;
-    }
-
-    input {
-      padding: 16px;
-      border: none;
-      background-color: #1d1d1d;
-      border-radius: 10px;
-    }
-
-    button {
-      margin-left: 8px;
-      padding: 16px;
-      border: none;
-      color: #fff;
-      background-color: #1d1d1d;
-      border-radius: 10px;
-      cursor: pointer;
-    }
+a:hover {
+  background-color: hsl(160, 100%, 50%);
+  transform: scale(1.05);
+}
   </style>
-
 </head>
 <body>
-  <nav>
-    <input type="text" placeholder="Search...">
-    <button onclick="addCard()">Add New Card</button>
-  </nav>
-  <h2>AI</h2>
-  <a href="https://bard.google.com/">Bard</a>
-  <a href="https://chat.openai.com/">ChatGPT</a>
-  <a href="https://app.leonardo.ai/">leonardoAi</a>
-  <a href="https://palette.fm/color/filters">Palette</a>
-  <a href="https://www.anyrec.io/image-upscaler/">Upscale</a>
-  <a href="https://replicate.com/tencentarc/gfpgan">gfpgan</a>
-  <a href="https://tensor.art">tensor</a>
+  <div class="container">
+    <div class="bookmarks">
+      <div class="square">
+        <div class="square-header">AI</div>
+        <a href="https://bard.google.com/">Bard</a>
+        <a href="https://chat.openai.com/">ChatGPT</a>
+        <a href="https://app.leonardo.ai/">leonardoAi</a>
+        <a href="https://palette.fm/color/filters">Pallete</a>
+        <a href="https://www.anyrec.io/image-upscaler/">Upscale</a>
+        <a href="https://replicate.com/tencentarc/gfpgan">gfpgan</a>
+        <a href="https://tensor.art">tensor</a>
 
-  <h2>Google</h2>
-  <a href="https://www.google.com">Search</a>
-  <a href="https://mail.google.com">Gmail</a>
-  <a href="https://www.google.com/maps">Maps</a>
-  <a href="https://drive.google.com">Drive</a>
-  <a href="https://photos.google.com">Photos</a>
-  <a href="http://youtube.com/">Youtube</a>
-
-  <h2>Others</h2>
-  <a href="https://www.instagram.com">Instagram</a>
-  <a href="https://www.linkedin.com">LinkedIn</a>
-  <a href="https://www.pinterest.com">Pinterest</a>
-  <a href="https://www.reddit.com">Reddit</a>
-  <a href="https://www.notion.so/">Notion</a>
-  <a href="https://www.geoguessr.com/">geoguessr</a>
-  <a href="https://open.spotify.com/">Spotify</a>
-  <a href="https://github.com/aswinsoap?tab=repositories">Github</a>
-  
+      </div>
+      <div class="square">
+        <div class="square-header">Google</div>
+        <a href="https://www.google.com">Search</a>
+        <a href="https://mail.google.com">Gmail</a>
+        <a href="https://www.google.com/maps">Maps</a>
+        <a href="https://drive.google.com">Drive</a>
+        <a href="https://photos.google.com">Photos</a>
+        <a href="http://youtube.com/">Youtube</a>
+      </div>
+      <div class="square">
+        <div class="square-header">Others</div>
+        <a href="https://www.instagram.com">Instagram</a>
+        <a href="https://www.linkedin.com">LinkedIn</a>
+        <a href="https://www.pinterest.com">Pinterest</a>
+        <a href="https://www.reddit.com">Reddit</a>
+        <a href="https://www.notion.so/">Notion</a>
+        <a href="https://www.geoguessr.com/">geoguessr</a>
+        <a href="https://open.spotify.com/">Spotify</a>
+        <a href="https://github.com/aswinsoap?tab=repositories">Github</a>
+    </div>
+  </div>
+  </div>
 </body>
-
 </html>
